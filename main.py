@@ -1,0 +1,41 @@
+# Ryan Eatmon
+# This code introduces more player and agent commands
+Lamar_Jackson = player.name()
+myPlace = player.position()
+agent.teleport_to_player()
+agent.move(FORWARD, 1)
+player.say("Hello, I am: ")
+player.say(player.name())
+loops.pause(1000)
+player.say("How did you get here?")
+loops.pause(1000)
+player.say("Here are my location and facing direction: ")
+player.say(player.position())
+player.say(player.get_orientation())
+mobs.execute(mobs.target(MY_AGENT), pos(0, 0, 0), "say Oh, hello!")
+loops.pause(2000)
+
+player.say("Here is my codeing helper")
+loops.pause(2000)
+player.say("I can tell everyone my agent's location and facing direction: ")
+player.say(agent.get_position())
+player.say(agent.get_orientation())
+mobs.execute(mobs.target(MY_AGENT), pos(0, 0, 0), "say Hmmm, that's where I am?")
+loops.pause(2000)
+
+mobs.execute(mobs.target(MY_AGENT), pos(0, 0, 0),"say §5 I'm going to be tricky!")
+
+agent.turn_left()
+agent.move(FORWARD, 2)
+agent.move(RIGHT, 3)
+agent.move(FORWARD, 4)
+agent.move(FORWARD, 3)
+agent.move(LEFT, 2)
+agent.move(FORWARD, 1)
+mobs.execute(mobs.target(MY_AGENT), pos(0, 0, 0), "say Hmmm, you're sure that's where I am?")
+loops.pause(2000)
+player.say("I forgot to tell everyone how playful my agent is!")
+player.say("...but I can find you again-  my agent is at:")
+player.say(agent.get_position())
+
+
